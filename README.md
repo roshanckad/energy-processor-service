@@ -7,8 +7,8 @@ This is a spring boot microservice to calculate estimated energy consumption bil
 
 ### Built With
 
-* [![Java][Java]][Next-url]
-* [![Maven][Maven]][Maven-url]
+* [Java](https://www.java.com/en/) >= 11
+* [Maven](https://maven.apache.org/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -23,7 +23,7 @@ Build the application
   mvn clean build
   ```
 Build the docker image
-* mvn
+* mvnw
   ```sh
   ./mvnw spring-boot:build-image
   ```
@@ -39,7 +39,3 @@ Start the application
 Navigate to [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- MARKDOWN LINKS & IMAGES -->
-[Java-url]: https://www.java.com/en/
-[Maven-url]: https://maven.apache.org/
