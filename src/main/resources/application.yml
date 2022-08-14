@@ -1,0 +1,8 @@
+feign:
+  service:
+    coalfired:
+      name: coal-fired-api
+      url: https://run.mocky.io/v3/6112c8ba-a455-4d73-b716-d5cd98e15917
+    cleanenergy:
+      name: clean-energy-api
+      url: https://run.mocky.io/v3/9138110a-121d-425e-b99b-e742b927a339

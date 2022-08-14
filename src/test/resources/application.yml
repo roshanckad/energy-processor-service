@@ -1,0 +1,8 @@
+feign:
+  service:
+    coalfired:
+      name: coal-fired-api
+      url: https://test/value
+    cleanenergy:
+      name: clean-energy-api
+      url: https://test/value
