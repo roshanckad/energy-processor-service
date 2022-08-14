@@ -30,7 +30,7 @@ public class BillCalculatorServiceImpl implements BillCalculatorService {
   private RateProportionConfig rateProportionConfig;
 
   @Override
-  public Optional<Price> getEstimatedBill(String userName, String type, String quantity) {
+  public Optional<Price> getEstimatedBill(String userName, String quantity) {
 
     if (!NumberUtils.isCreatable(quantity) || Float.compare(Float.parseFloat(quantity) - 0, 0.01f) < 0) {
       throw new InvalidDataException("Invalid quantity");
@@ -44,7 +44,7 @@ public class BillCalculatorServiceImpl implements BillCalculatorService {
 
     float calculatedRate = calculatedRate(coalFiredEnergyRate, cleanEnergyRate, quantity);
 
-    log.info("{} estimated rate for user {} is {}", type, userName, calculatedRate);
+    log.info("Estimated rate for user {} is {}", userName, calculatedRate);
 
     return Optional.of(Price.builder()
       .unit(coalFiredEnergyRate.getPrice().getUnit())
@@ -75,8 +75,8 @@ public class BillCalculatorServiceImpl implements BillCalculatorService {
 
       return Float.parseFloat(
         new DecimalFormat("##.00")
-          .format((float) ((Float.parseFloat(quantity) * rateProportionConfig.getClean() * cleanEnergyRateValuePerUnit)
-            + (Float.parseFloat(quantity) * rateProportionConfig.getColaFired() * coalFiredEnergyRateValuePerUnit)))
+          .format((Float.parseFloat(quantity) * rateProportionConfig.getClean() * cleanEnergyRateValuePerUnit)
+            + (Float.parseFloat(quantity) * rateProportionConfig.getColaFired() * coalFiredEnergyRateValuePerUnit))
       );
     } catch (NumberFormatException e) {
       throw new RateCalculateException("Unable to calculate rate");

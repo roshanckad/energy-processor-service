@@ -6,5 +6,5 @@ import java.util.Optional;
 
 public interface BillCalculatorService {
 
-  Optional<Price> getEstimatedBill(String userName, String type, String quantity);
+  Optional<Price> getEstimatedBill(String userName, String quantity);
 }

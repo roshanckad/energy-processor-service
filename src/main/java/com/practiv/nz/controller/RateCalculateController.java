@@ -31,13 +31,12 @@ public class RateCalculateController {
         schema = @Schema(implementation = EstimatedBillResponse.class))}),
     @ApiResponse(responseCode = "400", description = "Invalid input",
       content = @Content)})
-  @GetMapping("/users/{user_name}/type/{type}/quantity/{quantity}/estamatedbill")
+  @GetMapping("/users/{user_name}/quantity/{quantity}/estimatedbill")
   public ResponseEntity<EstimatedBillResponse> calculateEstimatedBill(@PathVariable(value = "user_name") String userName
-    , @PathVariable(value = "type") String type
     , @PathVariable(value = "quantity") String quantity) {
 
     return ResponseEntity.of(Optional.of(EstimatedBillResponse.builder()
-      .price(billCalculatorService.getEstimatedBill(userName, type, quantity)
+      .price(billCalculatorService.getEstimatedBill(userName, quantity)
         .orElseThrow(() -> new RateCalculateException("Unable to calculate rate for " + userName)))
       .build()));
   }
