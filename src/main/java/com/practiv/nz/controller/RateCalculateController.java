@@ -2,6 +2,11 @@ package com.practiv.nz.controller;
 
 import com.practiv.nz.model.EstimatedBillResponse;
 import com.practiv.nz.service.BillCalculatorService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +23,13 @@ public class RateCalculateController {
   @Autowired
   private BillCalculatorService billCalculatorService;
 
+  @Operation(summary = "Get estimated bill")
+  @ApiResponses(value = {
+    @ApiResponse(responseCode = "200", description = "Estimated bill",
+      content = {@Content(mediaType = "application/json",
+        schema = @Schema(implementation = EstimatedBillResponse.class))}),
+    @ApiResponse(responseCode = "400", description = "Invalid input",
+      content = @Content)})
   @GetMapping("/users/{user_name}/type/{type}/quantity/{quantity}/estamatedbill")
   public ResponseEntity<EstimatedBillResponse> calculateEstimatedBill(@PathVariable(value = "user_name") String userName
     , @PathVariable(value = "type") String type
