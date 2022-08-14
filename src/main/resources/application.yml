@@ -6,3 +6,6 @@ feign:
     cleanenergy:
       name: clean-energy-api
       url: https://run.mocky.io/v3/9138110a-121d-425e-b99b-e742b927a339
+energy:
+  clean: 0.81
+  cola-fired: 0.19

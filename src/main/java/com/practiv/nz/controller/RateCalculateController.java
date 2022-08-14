@@ -1,7 +1,9 @@
 package com.practiv.nz.controller;
 
+import com.practiv.nz.exception.RateCalculateException;
 import com.practiv.nz.model.EstimatedBillResponse;
 import com.practiv.nz.service.BillCalculatorService;
+import com.practiv.nz.service.BillCalculatorServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -36,7 +38,8 @@ public class RateCalculateController {
     , @PathVariable(value = "quantity") String quantity) {
 
     return ResponseEntity.of(Optional.of(EstimatedBillResponse.builder()
-      .price(billCalculatorService.getEstimatedBill(userName, type, quantity))
+      .price(billCalculatorService.getEstimatedBill(userName, type, quantity)
+        .orElseThrow(() -> new RateCalculateException("Unable to calculate rate for " + userName)))
       .build()));
   }
 }
