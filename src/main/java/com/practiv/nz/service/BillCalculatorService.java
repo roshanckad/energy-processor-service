@@ -21,12 +21,12 @@ public class BillCalculatorService {
   private CoalFiredApiClient coalFiredApiClient;
   @Autowired
   private CleanEnergyApiClient cleanEnergyApiClient;
-  private final String BLOCK_265_OFFER_PRICE = "block-265-offer-price";
-  private final String COALFIRED_FIELDS = "id,price,unitOfMeasure";
 
   public Price getEstimatedBill(String userName, String type, String quantity) {
 
     float calculatedRate = 0;
+    String BLOCK_265_OFFER_PRICE = "block-265-offer-price";
+    String COALFIRED_FIELDS = "id,price,unitOfMeasure";
 
     ProductOfferingPrice coalFiredEnergyRate = coalFiredApiClient.getRate(BLOCK_265_OFFER_PRICE, COALFIRED_FIELDS);
     CleanEnergyRate cleanEnergyRate = cleanEnergyApiClient.getRate(getNextMonthOrYear("MONTH"), getNextMonthOrYear("YEAR"));
