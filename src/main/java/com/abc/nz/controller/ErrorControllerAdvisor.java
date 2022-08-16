@@ -1,7 +1,7 @@
-package com.practiv.nz.controller;
+package com.abc.nz.controller;
 
-import com.practiv.nz.exception.InvalidDataException;
-import com.practiv.nz.exception.RateCalculateException;
+import com.abc.nz.exception.InvalidDataException;
+import com.abc.nz.exception.RateCalculateException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

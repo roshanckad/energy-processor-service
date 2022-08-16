@@ -1,4 +1,4 @@
-package com.practiv.nz.model;
+package com.abc.nz.model;
 
 import lombok.Builder;
 import lombok.Getter;

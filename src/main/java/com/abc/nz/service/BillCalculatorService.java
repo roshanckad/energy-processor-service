@@ -1,6 +1,6 @@
-package com.practiv.nz.service;
+package com.abc.nz.service;
 
-import com.practiv.nz.model.Price;
+import com.abc.nz.model.Price;
 
 import java.util.Optional;
 

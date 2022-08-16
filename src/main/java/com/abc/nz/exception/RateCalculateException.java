@@ -1,4 +1,4 @@
-package com.practiv.nz.exception;
+package com.abc.nz.exception;
 
 import lombok.extern.slf4j.Slf4j;
 

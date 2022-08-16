@@ -1,6 +1,6 @@
-package com.practiv.nz.client;
+package com.abc.nz.client;
 
-import com.practiv.nz.model.CleanEnergyRate;
+import com.abc.nz.model.CleanEnergyRate;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

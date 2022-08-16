@@ -1,8 +1,8 @@
-package com.practiv.nz.controller;
+package com.abc.nz.controller;
 
-import com.practiv.nz.exception.RateCalculateException;
-import com.practiv.nz.model.EstimatedBillResponse;
-import com.practiv.nz.service.BillCalculatorService;
+import com.abc.nz.exception.RateCalculateException;
+import com.abc.nz.service.BillCalculatorService;
+import com.abc.nz.model.EstimatedBillResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

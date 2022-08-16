@@ -1,4 +1,4 @@
-package com.practiv.nz.config;
+package com.abc.nz.config;
 
 import org.springframework.context.annotation.Configuration;
 

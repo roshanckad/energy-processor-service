@@ -1,13 +1,13 @@
-package com.practiv.nz.service;
+package com.abc.nz.service;
 
-import com.practiv.nz.client.CleanEnergyApiClient;
-import com.practiv.nz.client.CoalFiredApiClient;
-import com.practiv.nz.config.RateProportionConfig;
-import com.practiv.nz.exception.InvalidDataException;
-import com.practiv.nz.exception.RateCalculateException;
-import com.practiv.nz.model.CleanEnergyRate;
-import com.practiv.nz.model.Price;
-import com.practiv.nz.model.ProductOfferingPrice;
+import com.abc.nz.client.CleanEnergyApiClient;
+import com.abc.nz.client.CoalFiredApiClient;
+import com.abc.nz.config.RateProportionConfig;
+import com.abc.nz.exception.RateCalculateException;
+import com.abc.nz.model.CleanEnergyRate;
+import com.abc.nz.model.Price;
+import com.abc.nz.model.ProductOfferingPrice;
+import com.abc.nz.exception.InvalidDataException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -8,7 +8,7 @@
         <version>2.7.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.practiv.nz</groupId>
+    <groupId>com.abc.nz</groupId>
     <artifactId>lowcarbpower-processor-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>lowcarbpower-processor-service</name>
